@@ -2,7 +2,7 @@
 <module version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
-      <configuration version="3" platform="JavaScript " allPlatforms="JS []" useProjectSettings="false" isTestModule="true" externalProjectId="KotlinOnNodeJSSample" pureKotlinSourceFolders="$MODULE_DIR$/../../src/test/kotlin;/Users/yt8492/IdeaProjects/KotlinOnNodeJSSample/src/main/kotlin">
+      <configuration version="3" platform="JavaScript " allPlatforms="JS []" useProjectSettings="false" isTestModule="true" externalProjectId="KotlinOnNodeJSSample" pureKotlinSourceFolders="$MODULE_DIR$/../../src/test/kotlin;/Users/yt8492/IdeaProjects/KotlinOnNodeJSSample/src/main/kotlin;/Users/yt8492/IdeaProjects/KotlinOnNodeJSSample/src/main/external">
         <sourceSets>
           <sourceSet>com.yt8492.KotlinOnNodeJSSample.main</sourceSet>
         </sourceSets>
