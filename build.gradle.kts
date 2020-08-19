@@ -15,7 +15,6 @@ dependencies {
     implementation("org.jetbrains.kotlinx:kotlinx-nodejs:0.0.6")
 }
 
-kotlin.target {
-    useCommonJs()
-    nodejs()
+kotlin.js().nodejs {
+    runTask {  }
 }
