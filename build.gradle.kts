@@ -12,7 +12,7 @@ repositories {
 
 dependencies {
     implementation(kotlin("stdlib-js"))
-    implementation("org.jetbrains.kotlinx:kotlinx-nodejs:0.0.6")
+    implementation("org.jetbrains.kotlinx:kotlinx-nodejs:0.0.7")
     implementation(npm("webpack-node-externals", "2.5.1"))
 }
 
