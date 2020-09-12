@@ -1,20 +1,26 @@
 fun main() {
-    val server = http.createServer { req, res ->
-        if (req.method == "POST") {
-            val bodyBuilder = StringBuilder()
-            req.on("data") { data: Any ->
-                bodyBuilder.append(data.toString())
-            }
-            req.on("end") { ->
-                res.write("url: ${req.url}\n")
-                res.write("body: ${bodyBuilder.toString()}\n")
-                res.end()
-            }
-        } else {
-            res.write("url: ${req.url}\n")
-            res.write("method: ${req.method}")
-            res.end()
-        }
+    val server = Server()
+    server.get("/") { _, response ->
+        response.message = "Hello world!"
+        response.statusCode = 200
     }
-    server.listen(8080)
+    server.post("/") { request, response ->
+        response.message = "body: ${request.body}"
+        response.statusCode = 200
+    }
+    server.get("/queryTest") { request, response ->
+        val foo = request.queryParameters["foo"]
+        val bar = request.queryParameters["bar"]
+        response.message = "foo: $foo, bar: $bar"
+        response.statusCode = 200
+    }
+    server.get("/headerTest") { request, response ->
+        val hoge = request.headers["hoge"]
+        val fuga = request.headers["fuga"]
+        response.message = "hoge: $hoge, fuga: $fuga"
+        response.statusCode = 200
+    }
+    server.listen(8080) {
+        println("server start")
+    }
 }
